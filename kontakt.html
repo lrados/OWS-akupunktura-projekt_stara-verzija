@@ -1,0 +1,129 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Akupunktura Švaganović - Kontakt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="Keywords" content="ivf oplodnja, kako akupunktura djeluje, elektroakupunktura, laserska akupunktura, cuping, akupresura, ušna akupunktura,bezbolna akupunktura, nova ves, celulit, bore, vitamini i minerali, akupunktura hrvatska, sonja švaganović, mršavljenje, akupunktura zagreb, migrena, križobolja, alergije, stres, astma, upale sinusa, menopauza, imunitet, dijeta, centar, glavobolja, debljina">
+	<meta name="Description" content="Akupunktura Zagreb - Tradicionalnom kineskom medicinom održavamo i poboljšavamo kvalitetu Vašeg zdravlja">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+	
+	function Mail(){
+	
+		ime = document.getElementById('ime').value;
+		email = document.getElementById('email').value;
+		poruka = document.getElementById('poruka').value;
+		
+		if ( email != null && ime != null && poruka != null ){
+		
+			var zahtjev;
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  zahtjev=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  zahtjev=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			  
+			zahtjev.onreadystatechange=function()
+			  {
+			  if (zahtjev.readyState==4 && zahtjev.status==200){
+				document.getElementById("alert").innerHTML= zahtjev.responseText;
+				document.getElementById("alert").style.display = 'block';
+				
+			}
+			  }
+			zahtjev.open("GET","mail.php?ime=" + ime + "&email=" + email + "&poruka=" + poruka,true);
+			zahtjev.send(); 
+		 }else{ alert('Molimo popunite sva polja!'); }
+	}
+	
+	function CloseAlert(){
+		document.getElementById('alert').style.display = 'none';
+		document.getElementById("ime").value = '';
+		document.getElementById("email").value = '';
+		document.getElementById("poruka").value = '';
+	}
+	</script>
+	<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27872728-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
+
+	
+</head>
+<body>
+
+<div id="alert" style="display:none;"></div>
+
+	<div id="main">
+		<div id="top_nav">
+			<a href="index.html">Početna</a>
+			<a href="sto-lijecimo.html">Što liječimo</a>
+			<a href="kako-lijecimo.html">Kako liječimo</a>
+			<a href="kako-do-nas.html">Kako do nas</a>
+			<a href="kontakt.html" class="active">Kontakt</a>
+		</div>
+		
+		<div id="banner">
+			<b>Centar za Tradicionalnu kinesku medicinu - akupunkturu, herbalnu medicinu i energetsko iscjeljivanje</b>
+		</div>
+		
+		<div id="container">
+		
+			<div id="nav">
+				<h1>Glavni izbornik</h1>
+				
+				<a href="o-akupunkturi.html">O akupunkturi</a>
+				<a href="kako-akupunktura-djeluje.html">Kako djeluje</a>
+				<a href="usna-akupunktura.html">Ušna akupunktura</a>
+				<a href="akupunktura-i-ivf.html">Akupunktura i IVF</a>
+				
+			</div>
+			
+			<div id="content">
+				<h1>Kontakt</h1>
+								
+				
+				<h2 style="margin-bottom:30px;">Centar za Tradicionalnu kinesku medicinu - akupunkturu, herbalnu medicinu i energetsko iscjeljivanje</h2>
+				
+				
+				<div style="float:right;margin-right:30px;">
+				<b>Radno vrijeme</b>
+				<p>ponedjeljak - petak<br/>od 14 do 19 sati i prema dogovoru</p>
+				<p>Nova Ves 43<br/>10000 Zagreb<p>
+				<p><b>e-mail: </b>sonjasvaganovic@yahoo.com</p>
+				<p><b>Mob: </b>+385 98 394 475</p>
+				
+				</div>
+				
+				
+				
+				Vaše ime i prezime:&nbsp; <input type="text" id="ime" value="" /><br/>
+				Vaša e-mail adresa: <input type="text" id="email" value="" /><br/><br/>
+				Vaša poruka:<br/>
+				<textarea id="poruka"></textarea><br/>
+				<input type="button" id="contact_submit" onclick="javascript:Mail();" style="margin:20px 0px 0px 10px;" value="Pošalji" />
+				<div style="clear:both">&nbsp;</div>
+			
+			</div>
+		
+		
+		</div>
+				
+	</div>
+
+</body>
+</html>
